@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>Backup</title>
+    <!-- ======================= links to bootstrap files =================== -->
+    <link rel="stylesheet" href="../static/bootstrap4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/bootstrap4.1.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/bootstrap4.1.3/css/animate.css">
+    <!-- ====================== links to javascript files =================== -->
+    <script src ="../static/bootstrap4.1.3/js/jquery.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/bootstrap.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/parallax.min.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/wow.min.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/jquery.easing.min.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/fliplightbox.min.js"></script>
+    <script src ="../static/bootstrap4.1.3/js/functions.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+
+
+    <style>
+
+        #landingpage h1{
+            font-weight: bolder;
+            font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+        }
+        #bottom{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top:3%;
+            padding-bottom:3%;
+            background-color: #1b1e21;
+            text-align: left;
+            float: bottom;
+            font-size: small;
+        }
+        #bottomlist{
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+            font-size: medium;
+            line-height: 0.5em;
+        }
+        .carousel-inner img{
+            width: 100%;
+            height: 600px;
+
+        }
+        .carousel-caption{
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: initial;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <a href="/homepage" class="navbar-brand">SMOKE HOUSE</a>
+        <!-- button to trigger links for small screens-->
+        <!-- this class(navbar-toggler) makes sure that the button is not visible when the browser window is at its largest. When the screen ()view port-->
+        <!--is smaller like a phone the link will disappear and the menu button will appear on the upper right corner-->
+        <button class="navbar-toggler" data-target="#mynav" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mynav">
+            <!-- mr-auto stand for margin right auto. self explanatory -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#meals" class="nav-link">Meals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#drinks" class="nav-link">Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#desserts" class="nav-link">Dessert</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contactus" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <h5>{{msg}}</h5>
+            <nav class="navbar navbar-light bg-white">
+                <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+    </nav>
+
+
+<!-- =============================================== CAROUSEL =========================================================-->
+    <section class="row" id="home">
+        <div class="col-md-12 carousel slide" id="demo"  data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../static/image/carousel1.jpg" alt="food asssortment">
+              <div class="carousel-caption">
+                  <h1 class="text-primary">Are you hungry?</h1>
+                  <p class="text-warning">Well, feast your eyes on our delectable range of juicy, mouthwatering, lip-biting meals.</p>
+                  <p class="text-warning">Just say when and where and we'll that meal to you. Pronto!</p>
+                  <a href="" class="btn btn-dark">Get started</a>
+                  <a href="" class="btn btn-dark">Subscribe</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/chickenCarousel.jpg" alt="chicken">
+               <div class="carousel-caption">
+                  <h1 class="text-primary">Are you hungry?</h1>
+                  <p class="text-warning">Well, feast your eyes on our delectable range of juicy, mouthwatering, lip-biting meals.</p>
+                  <p class="text-warning">Just say when and where and we'll that meal to you. Pronto!</p>
+                  <a href="" class="btn btn-dark">Get started</a>
+                  <a href="" class="btn btn-dark">Subscribe</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/skewersCarousel.jpg" alt="skewers">
+              <div class="carousel-caption"  style=" margin:0 auto;">
+                  <h1 class="text-primary">Are you hungry?</h1>
+                  <p class="text-warning">Well, feast your eyes on our delectable range of juicy, mouthwatering, lip-biting meals.</p>
+                  <p class="text-warning">Just say when and where and we'll that meal to you. Pronto!</p>
+                  <a href="" class="btn btn-dark">Get started</a>
+                  <a href="" class="btn btn-dark">Subscribe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+    </section>
+
+
+    <!-- ======================== MAIN SECTION/CONTENTS OF THE PAGE========================== -->
+    <!-- ==================================================================================== -->
+
+    <section class="text-justify" style="padding: 10%;">
+
+         <!-- ============================= SECTION ONE ============================ -->
+         <section class="row text-justify">
+                <div class="col-md-4">
+                    <img src="../static/image/smokehouse.jpg" alt="smokehouse.jpg" class="img-fluid">
+                </div>
+
+                    <!--colors : primary, success, secondary, warning, danger, dark, light
+                    text-*
+                    bg-*
+                    btn-*
+                    -->
+                <div class="col-md-8">
+                    <h3 class="text-warning wow bounceIn" data-wow-delay="0.3s" align="center">About Us</h3>
+                    <hr color="#659df7" width="20%" align="center" >
+                    <p class="text-secondary">Empowering the youth, electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                        <a href="#" class="btn btn-dark">Subscribe</a>
+                        <a href="/register" class="btn btn-outline-warning">Register</a>
+                </div>
+         </section>
+
+
+        <!-- ===================================== SECTION TWO ============================================= -->
+        <!-- =====================================    MEALS   ============================================= -->
+        <header class="header text-center" id="meals" style="padding-top:10%">
+        <h2 class="wow fadeIn" data-wow-delay="0.3s">Main Course</h2>
+        <hr color="#659df7" width="20%" align="center" >
+        <p>Simply Delectable and Always Piping Hot!</p>
+        </header>
+        <!-- ========= ROW ONE ========== -->
+
+        <section class="row">
+            {%  for row in mealsdata %}
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.3s">
+                <div class="card">
+                    <h4>{{ msg }}</h4>
+
+                    <b>{{ row[4] }}</b><br>
+                    <div class="card-body">
+                        <b class="card-title">{{ row[1] }}</b><br>
+                        <p>{{ row[3] }} $</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+            {% endfor  %}
+            <span style="padding-bottom:100px"></span>
+        </section>
+
+        <!-- ====================================== SECTION THREE =================================================-->
+        <!-- ======================================     DRINKS    ============================================= -->
+
+        <header class="header text-center" id="drinks" style="padding-top:10%">
+        <h2 class="wow fadeIn" data-wow-delay="0.3s">Drinks</h2>
+        <hr color="#659df7" width="20%" align="center" >
+        <p>Always Remember to wash everything down with a Nice Cold One!</p>
+        </header>
+        <!-- ========= ROW ONE ========== -->
+        <section class="row">
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.3s">
+                <div class="card">
+                    <img src="../static/image/OldWisconsin.jpg" alt="wisconsin.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Old Wisconsin cocktail</h4>
+                        <p>5.99$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- data-wow-delay="0.5s" changes the timing of the fade by specifying the time in seconds(s)-->
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.5s">
+                <div class="card">
+                    <img src="../static/image/Bourbon.jpg" alt="Bourbon.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Classic Bourbon</h4>
+                        <p>5.99$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.8s">
+                <div class="card">
+                    <img src="../static/image/OldAztec.jpg" alt="oldaztec.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Old Aztec cocktail</h4>
+                        <p>6.50$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================== SECTION FOUR ============================================= -->
+        <!-- =====================================   DESSERTS   ============================================= -->
+        <header class="header text-center" id="desserts" style="padding-top:10%">
+        <h2 class="wow fadeIn" data-wow-delay="0.3s">Desert</h2>
+        <hr color="#659df7" width="20%" align="center" >
+        <p>For those with a sweet tooth ... and some room left!</p>
+        </header>
+        <!-- ========= ROW ONE ========== -->
+        <section class="row">
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.3s">
+                <div class="card">
+                    <img src="../static/image/chocolateExplosion.jpg" alt="chocolate.jpeg">
+                    <div class="card-body">
+                        <h4 class="card-title">Chocolate Explosion</h4>
+                        <p>9.99$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- data-wow-delay="0.5s" changes the timing of the fade by specifying the time in seconds(s)-->
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.5s">
+                <div class="card">
+                    <img src="../static/image/cakePrezzle.jpg" alt="cake.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Sweet Cheese cake with Prezzles</h4>
+                        <p>19.99$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.8s">
+                <div class="card">
+                    <img src="../static/image/pancakes.jpg" alt="pancakes.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Pancakes layered with honey</h4>
+                        <p>11.50$</p>
+                        <a href="" class="btn btn-outline-success">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================== SECTION FIVE ============================================= -->
+        <!-- =====================================  CONTACT US   ============================================= -->
+        <header class="header text-center" id="contactus" style="padding-top:10%">
+            <h2>Talk to us</h2>
+            <hr color="#659df7" width="20%" align="center" >
+            <p>Empowering the youth, electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+        </header>
+        <section class="row">
+             <div class="col-md-6">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.
+                 3822475406264!2d-71.11884878502468!3d42.37700287918577!2m3!1f0!2f0!3f0!
+                 3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e377427d7f0199%3A0x5937c65cee2427f0!
+                 2sHarvard+University!5e0!3m2!1sen!2ske!4v1537437036622" width="100%"
+                 height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+             </div>
+             <div class="col-md-6">
+                <form action="" role="form">
+                    <div class="form-group">
+                        <label for="">Email:</label> <br>
+                        <input type="email" class="form-control" placeholder="Your email...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tel:</label> <br>
+                        <input type="tel" class="form-control" placeholder="Your tel number...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name:</label> <br>
+                        <input type="text" class="form-control" placeholder="Your name...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Message:</label> <br>
+                        <textarea name="" id="" class="form-control" cols="50" rows="5" placeholder="Your comment..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-dark" value="Submit query">
+                    </div>
+                </form>
+             </div>
+        </section>
+
+
+
+    </section> <!--Ending tag for main section-->
+
+
+
+    <!-- ============================= BOTTOM OF PAGE(FOOTER SECTION)================================ -->
+
+    <section class="row" id="bottom">
+            <div class="col-md-4">
+                <h5 class="text-light">About Us</h5>
+                <hr color="#659df7" width="20%" align="left" >
+                <p class="text-secondary">Empowering the youth, electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                <br>
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-light">Latest news</h5>
+                <hr color="#659df7" width="20%" align="left" >
+                <ul id="bottomlist" class="text-secondary" type="circle">
+                    <li>Trend dont matter but techniques does
+                        <hr color="darkslategrey" >
+                    </li>
+                    <li>Trend dont matter but techniques does
+                    <hr color="darkslategrey" >
+                    </li>
+                    <li>Trend dont matter but techniques does
+                    <hr color="darkslategrey" >
+                    </li>
+                    <li>Trend dont matter but techniques does
+                    <hr color="darkslategrey" >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-light">Follow Us On Instagram</h5>
+                <hr color="#659df7" width="20%" align="left" >
+                <img src="../static/image/daisy.jpg" alt="image.jpg" class="img-fluid">
+            </div>
+    </section>
+
+
+
+
+</body>
+</html>
