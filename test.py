@@ -4,7 +4,7 @@ import os
 from werkzeug.utils import secure_filename
 
 
-UPLOAD_FOLDER = 'C:\\Users\\Mary\\Documents\\1.PycharmProgams\\RestaurantWebsiteFlaskProject\\static\\image'
+UPLOAD_FOLDER = 'C:\\Users\\MyName\\Documents\\ProgramFiles\\FlaskProject\\static\\image' # location where the file should be saved
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 #ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
@@ -51,7 +51,10 @@ def additem():
     else:
         return render_template('add-item.html')
 
-
+    
+# the unction below displays the items which were added to the meals_tbl using the additem() function in the backend, 
+# at the homepage for the user to view.
+# This removes the need for the administrator to code in a new element i.e <di><h3>Cake and custard</h3><p>11.99$</p></div>
 @app.route('/meals')
 def showMealsItems():
 
